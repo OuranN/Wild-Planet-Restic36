@@ -152,6 +152,7 @@ img{
   display: flex;
   width: 100%;
   justify-content: space-around;
+  
 }
 
 #tabuletas{
@@ -345,3 +346,40 @@ section{
 }
 
 
+@media (max-width:1100px){
+
+  main{
+    width: 100%;
+  }
+
+  #quiz-section>div>div{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  #quiz-section>div>div>button{
+    margin-bottom: 2em;
+  }
+}
+
+@media (max-width:580px){
+  #conteudo-inicial{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #tabuletas{
+    margin-top: 2em;
+  }
+
+  iframe{
+    width: 100%;
+  }
+
+}
+
+
+  
