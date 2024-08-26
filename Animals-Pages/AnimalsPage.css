@@ -379,8 +379,33 @@ section{
   }
 
   iframe{
-    width: 90%;
+    width: 80%;
+ 
   }
+
+}
+
+@media (max-width:400px){
+
+#conteudo>p{
+  padding: 2em;
+}
+
+#conteudo>img{
+  width: 17em;
+}
+
+
+#reproducao>p{
+ margin-right: 2em;
+}
+
+.habitos-reproducao-conservacao{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 
 }
 
