@@ -355,7 +355,6 @@ section{
   #quiz-section>div>div{
     display: flex;
     flex-direction: column;
-
     align-items: center;
   }
 
@@ -365,6 +364,10 @@ section{
 }
 
 @media (max-width:580px){
+
+  main{
+    border: none;
+  }
   #conteudo-inicial{
     flex-direction: column;
     justify-content: center;
@@ -376,7 +379,7 @@ section{
   }
 
   iframe{
-    width: 100%;
+    width: 90%;
   }
 
 }
