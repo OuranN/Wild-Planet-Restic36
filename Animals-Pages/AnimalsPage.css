@@ -392,7 +392,7 @@ section{
 }
 
 #conteudo>img{
-  width: 17em;
+  width: 16em;
 }
 
 #reproducao>div>p{
@@ -409,14 +409,11 @@ section{
 }
 
 #atividade-vida-dieta{
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-size: medium;
+  flex-direction: column;
 }
 
 #atividade-vida-dieta>div{
-  margin-left: 0em;
+  margin-bottom: 2em;
 
 }
 
