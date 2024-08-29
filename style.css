@@ -10,6 +10,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: #B39DDB;
   overflow: auto;
 }
@@ -139,13 +140,10 @@ header>#nav-bar>a:hover, #dropdown-btn:hover{
   margin-top: 0.4em;
 }
 
-
-
 #card-content{
   display: flex;
   margin-top: 0.4em;
   align-items: center;
-  justify-content: space-around;
 }
 
 section{
@@ -174,5 +172,32 @@ footer{
   text-align: center;
   font-family: "Lora", serif;
   font-size: small;
-  
+}
+
+@media only screen and (max-width: 600px){
+
+
+  header{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  header>#nav-bar>a, #dropdown-btn{
+    padding: 0.4em 0.7em;
+    overflow: hidden;
+  }
+
+  header>#nav-bar{
+    display: flex;
+    justify-content: end;
+    flex: 50%;
+    margin-right: 0;
+    
+  }
+
+  header{
+    height: 7em;
+  }
 }
