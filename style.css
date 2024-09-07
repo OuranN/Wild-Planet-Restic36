@@ -191,6 +191,7 @@ footer{
   text-align: center;
   font-family: "Lora", serif;
   font-size: small;
+  margin-top: 4em;
 }
 
 
@@ -198,7 +199,7 @@ footer{
   display: flex;
   flex-direction: column;
   width: 20%;
-  height: 42em;
+  height: 45em;
   background-color: #673AB7;
   border-radius: 0.2em;
   font-family: "Lora", serif;
