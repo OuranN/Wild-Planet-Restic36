@@ -22,14 +22,18 @@
       <div id="dropdown">
         <a href="index.html" id="dropdown-btn">Explorar</a>
         <div id="dropdown-content">
-          <a href="Animals-Pages/Axolotl.html">Axolote</a>
-          <a href="#">Raposa</a>
-          <a href="#">Coruja</a>
+          <a href="#">Abelha</a>
           <a href="#">Arraia</a>
-          <a href="#">Camaleão</a>
-          <a href="#">Urso-Polar</a>
+          <a href="Animals-Pages/Axolotl.html">Axolote</a>
           <a href="#">Baleia</a>
+          <a href="#">Camaleão</a>
+          <a href="#">Cavalo</a>
+          <a href="#">Coruja</a>
+          <a href="#">Girafa</a>
+          <a href="#">Hamster</a>
           <a href="#">Lince</a>
+          <a href="#">Raposa</a>
+          <a href="#">Urso-Polar</a>  
         </div>
       </div>
       <a href="">Sobre</a> 
@@ -38,29 +42,98 @@
   </header>
 
   <section>
+
+    <div id="filtro">
+      <h2>FILTROS</h2>
+
+      <div>
+        <h3>All</h3>
+        <label class="switch">
+          <input type="checkbox" id="all-check" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <h3>Habitos Alimentares</h3>
+      <div>
+        <h3>Carnivoros</h3>
+        <label class="switch">
+          <input type="checkbox" id="carnivoros-check" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div>
+        <h3>Herbivoros</h3>
+        <label class="switch">
+          <input type="checkbox" id="herbivoros-check" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div>
+        <h3>Onivoros</h3>
+        <label class="switch">
+          <input type="checkbox" id="onivoros-check" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <h3>Estado de Conservação</h3>
+      <div>
+        <h3>Espécies em extinção</h3>
+        <label class="switch">
+          <input type="checkbox" id="carnivoros-check" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div>
+        <h3>Vulneráveis</h3>
+        <label class="switch">
+          <input type="checkbox" id="herbivoros-check" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div>
+        <h3>Pouco Preocupantes</h3>
+        <label class="switch">
+          <input type="checkbox" id="onivoros-check" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+
+    </div>
+
+
     <div id="cards">
       <a href="Animals-Pages/Axolotl.html" >
-        <div class="card">
+        <div class="card onivoro">
           <img src="imgs/Axolot.jpg" alt="">
           <div id="card-content">
             <h2>Axolote</h2>
           </div>
           <h3>Ambystoma mexicanum</h3>
+          
         </div>
       </a>
       
       <a href="#" >
-        <div class="card">
+        <div class="card onivoro" >
           <img src="imgs/raposa.jpg" alt="">
           <div id="card-content">
             <h2>Raposa</h2>
+           
           </div>
           <h3>Vulpes vulpes</h3>
+          
         </div>
       </a>
 
       <a href="#" >
-        <div class="card">
+        <div class="card carnivoro">
           <img src="imgs/coruja.jpg" alt="">
           <div id="card-content">
             <h2>Coruja</h2>
@@ -70,7 +143,7 @@
       </a>
 
       <a href="#" >
-        <div class="card">
+        <div class="card carnivoro">
           <img src="imgs/arraia.jpg" alt="">
           <div id="card-content">
             <h2>Arraia</h2>
@@ -80,7 +153,7 @@
       </a>
 
       <a href="#" >
-        <div class="card">
+        <div class="card onivoro">
           <img src="imgs/camaleao.jpg" alt="">
           <div id="card-content">
             <h2>Camaleão</h2>
@@ -90,7 +163,7 @@
       </a>
 
       <a href="#" >
-        <div class="card">
+        <div class="card carnivoro">
           <img src="imgs/urso_polar.jpg" alt="">
           <div id="card-content">
             <h2>Urso-Polar</h2>
@@ -100,7 +173,7 @@
       </a>
 
       <a href="#" >
-        <div class="card">
+        <div class="card carnivoro">
           <img src="imgs/baleia.jpg" alt="">
           <div id="card-content">
             <h2>Baleia</h2>
@@ -110,7 +183,7 @@
       </a>
 
       <a href="#" >
-        <div class="card">
+        <div class="card carnivoro">
           <img src="imgs/lince.jpg" alt="">
           <div id="card-content">
             <h2>Lince</h2>
@@ -118,6 +191,48 @@
           <h3>Lynx</h3>
         </div>
       </a>
+
+      <a href="#" ></a>
+        <div class="card herbivoro">
+          <img src="imgs/girafa.jpg" alt="">
+          <div id="card-content">
+            <h2>Girafa</h2>
+          </div>
+          <h3>Giraffa camelopardalis</h3>
+        </div>
+      </a>
+
+      <a href="#" ></a>
+      <div class="card herbivoro">
+        <img src="imgs/cavalo.jpg" alt="">
+        <div id="card-content">
+          <h2>Cavalo</h2>
+        </div>
+        <h3>Equus caballus</h3>
+      </div>
+    </a>
+
+    <a href="#" ></a>
+    <div class="card herbivoro">
+      <img src="imgs/abelha.jpg" alt="">
+      <div id="card-content">
+        <h2>Abelha</h2>
+      </div>
+      <h3>Anthophila</h3>
+    </div>
+  </a>
+
+  <a href="#" ></a>
+  <div class="card herbivoro">
+    <img src="imgs/hamster.jpg" alt="">
+    <div id="card-content">
+      <h2>Hamster</h2>
+    </div>
+    <h3>Cricetinae</h3>
+  </div>
+</a>
+
+      
     </div>
   </section>
 
@@ -126,5 +241,8 @@
       <h3>© 2024 WildPlanet. Todos os direitos reservados.</h3>
     </div>
   </footer>
+
+  
 </body>
+<script src="filtro.js"></script>
 </html>
