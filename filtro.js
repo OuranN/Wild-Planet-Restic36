@@ -19,11 +19,11 @@ all.addEventListener('change', function(){
         aquaticos_check.checked=true;
         terrestres_check.checked=true;
         all.disabled=true;
-        updateVisibilityCarnivoros(true);  //remove o hidden dos animal cards carnivoros
-        updateVisibilityOnivoros(true);    //remove o hidden dos animal cards onivoros
-        updateVisibilityHerbivoros(true);  //remove o hidden dos animal cards herbivoros
-        updateVisibilityLand(true);  //remove o hidden dos animal cards terrestres
-        updateVisibilityAquatic(true);    //remove o hidden dos animal cards aquaticos
+        updateVisibilityCarnivoros(true, true);  //remove o hidden dos animal cards carnivoros
+        updateVisibilityOnivoros(true, true);    //remove o hidden dos animal cards onivoros
+        updateVisibilityHerbivoros(true, true);  //remove o hidden dos animal cards herbivoros
+        updateVisibilityLand(true, true);  //remove o hidden dos animal cards terrestres
+        updateVisibilityAquatic(true, true);    //remove o hidden dos animal cards aquaticos
     }
     if(all.checked==false){  
         all.disabled=false;
@@ -79,10 +79,13 @@ terrestres_check.addEventListener('change', function(){
 });
 
 //Alterna a visibilidade dos cards herbivoros, toggle= true: alterna entre visivel e invisivel, toggle=false: deixa os cards visiveis
-const updateVisibilityHerbivoros = (visibility) =>{
+const updateVisibilityHerbivoros = (visibility, all=false) =>{
     if(visibility){
         for (var i = 0; i < herbivoros.length; i++) {
-            if((herbivoros[i].classList.contains("aquatico") && aquaticos_check.checked==false) || (herbivoros[i].classList.contains("terrestre") && terrestres_check.checked==false)){} else{
+            if(all){
+                herbivoros[i].classList.remove("hidden");
+            }
+            if((herbivoros[i].classList.contains("aquatico") && aquaticos_check.checked==false) || (herbivoros[i].classList.contains("terrestre") && terrestres_check.checked==false) || all.checked==false){} else{
                 herbivoros[i].classList.remove("hidden");
             }
         }
@@ -94,11 +97,14 @@ const updateVisibilityHerbivoros = (visibility) =>{
 }
 
 //Altera a visibilidade dos cards carnivoros, toggle= true: alterna entre visivel e invisivel, toggle=false: deixa os cards visiveis
-const updateVisibilityCarnivoros = (visibility) =>{
+const updateVisibilityCarnivoros = (visibility, all=false) =>{
     if(visibility){    
         for (var i = 0; i < carnivoros.length; i++) {
+            if(all){
+                carnivoros[i].classList.remove("hidden");
+            }
 
-            if((carnivoros[i].classList.contains("aquatico") && aquaticos_check.checked==false) || (carnivoros[i].classList.contains("terrestre") && terrestres_check.checked==false)){} else{
+            if((carnivoros[i].classList.contains("aquatico") && aquaticos_check.checked==false) || (carnivoros[i].classList.contains("terrestre") && terrestres_check.checked==false) || all.checked==false){} else{
                 carnivoros[i].classList.remove("hidden");
             }
         }
@@ -110,10 +116,14 @@ const updateVisibilityCarnivoros = (visibility) =>{
 }
 
 //Altera a visibilidade dos cards onivoros, toggle= true: alterna entre visivel e invisivel, toggle=false: deixa os cards visiveis
-const updateVisibilityOnivoros = (visibility) =>{
+const updateVisibilityOnivoros = (visibility, all=false) =>{
     if(visibility){
         for (var i = 0; i < onivoros.length; i++) {
-            if((onivoros[i].classList.contains("aquatico") && aquaticos_check.checked==false) || (onivoros[i].classList.contains("terrestre") && terrestres_check.checked==false)){} else{
+            if(all){
+                onivoros[i].classList.remove("hidden");
+            }
+
+            if((onivoros[i].classList.contains("aquatico") && aquaticos_check.checked==false) || (onivoros[i].classList.contains("terrestre") && terrestres_check.checked==false) || all.checked==false){} else{
                 onivoros[i].classList.remove("hidden");
             }
         }
@@ -124,10 +134,14 @@ const updateVisibilityOnivoros = (visibility) =>{
     }
 }
 
-const updateVisibilityAquatic = (visibility)=>{
+const updateVisibilityAquatic = (visibility, all=false)=>{
     if(visibility){
         for (var i = 0; i < aquaticos.length; i++) {
-            if((aquaticos[i].classList.contains("carnivoro") && carnivoros_check.checked==false) || (aquaticos[i].classList.contains("onivoro") && onivoros_check.checked==false) || (aquaticos[i].classList.contains("herbivoro") && herbivoros_check.checked==false)){} else{
+            if(all){
+                aquaticos[i].classList.remove("hidden");
+            }
+
+            if((aquaticos[i].classList.contains("carnivoro") && carnivoros_check.checked==false) || (aquaticos[i].classList.contains("onivoro") && onivoros_check.checked==false) || (aquaticos[i].classList.contains("herbivoro") && herbivoros_check.checked==false) || all.checked==false){} else{
                 aquaticos[i].classList.remove("hidden");
             }
 
@@ -138,10 +152,13 @@ const updateVisibilityAquatic = (visibility)=>{
         } 
     }
 }
-const updateVisibilityLand= (visibility)=>{
+const updateVisibilityLand= (visibility, all=false)=>{
     if(visibility){
         for (var i = 0; i < terrestres.length; i++) {
-            if((terrestres[i].classList.contains("carnivoro") && carnivoros_check.checked==false) || (terrestres[i].classList.contains("onivoro") && onivoros_check.checked==false) || (terrestres[i].classList.contains("herbivoro") && herbivoros_check.checked==false)){} else{
+            if(all){
+                terrestres[i].classList.remove("hidden");
+            }
+            if((terrestres[i].classList.contains("carnivoro") && carnivoros_check.checked==false) || (terrestres[i].classList.contains("onivoro") && onivoros_check.checked==false) || (terrestres[i].classList.contains("herbivoro") && herbivoros_check.checked==false) || all.checked==false){} else{
                 terrestres[i].classList.remove("hidden");
             }
         }
