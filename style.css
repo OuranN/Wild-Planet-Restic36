@@ -105,7 +105,7 @@ header>#nav-bar>a:hover, #dropdown-btn:hover{
   border-radius: 1rem;
   justify-content: center;
   width: 70%;
-  padding: 1em;
+
 }
 
 #cards>a{
@@ -138,8 +138,6 @@ header>#nav-bar>a:hover, #dropdown-btn:hover{
   transition: 100ms  ease;
   background-color: #673AB7;
   color: white;
-  transform: perspective(20%);
-  translate: 10px;
 }
 
 .card>#card-content>h2{
@@ -199,15 +197,16 @@ footer{
   display: flex;
   flex-direction: column;
   width: 20%;
-  height: 45em;
+  height: 38em;
   background-color: #673AB7;
-  border-radius: 0.2em;
+  border-radius: 2em;
   font-family: "Lora", serif;
   align-items: center;
   padding: 2em;
   color: white;
   left: 3em;
-  overflow: auto;
+  overflow: hidden;
+  text-align: center;
 }
 
 #filtro>h2{
@@ -321,6 +320,10 @@ footer{
   .card{
     margin-right: 0.5em;
     margin-left: 0.5em;
+  }
+
+  #filtro{
+    display: none;
   }
 } 
 
