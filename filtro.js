@@ -67,6 +67,7 @@ aquaticos_check.addEventListener('change', function(){
         updateVisibilityAquatic(false);
         all.disabled=false;
     } 
+    updateCheckedAll();
 });
 
 terrestres_check.addEventListener('change', function(){
@@ -76,7 +77,25 @@ terrestres_check.addEventListener('change', function(){
         updateVisibilityLand(false);
         all.disabled=false;
     }
+    updateCheckedAll();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Alterna a visibilidade dos cards herbivoros, toggle= true: alterna entre visivel e invisivel, toggle=false: deixa os cards visiveis
 const updateVisibilityHerbivoros = (visibility, all=false) =>{
@@ -171,7 +190,7 @@ const updateVisibilityLand= (visibility, all=false)=>{
 
 //Altera o checkbox all
 const updateCheckedAll = (toggle=true) => {
-    if(carnivoros_check.checked && onivoros_check.checked && herbivoros_check.checked){
+    if(carnivoros_check.checked && onivoros_check.checked && herbivoros_check.checked && aquaticos_check.checked && terrestres_check.checked){
         all.checked=true;
     } else{
         all.checked=false;
